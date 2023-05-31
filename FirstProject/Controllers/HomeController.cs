@@ -27,7 +27,8 @@ namespace FirstProject.Controllers
         [HttpPost]
         public ViewResult Employees(Employee emp)
         {
-            return View();
+            Repository.AddEmployee(emp);
+            return View("ConfirmVue",emp);
         }
 
 
