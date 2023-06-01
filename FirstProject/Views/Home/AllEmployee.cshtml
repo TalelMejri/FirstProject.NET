@@ -1,0 +1,22 @@
+@model IEnumerable<Employee> 
+<html>
+ <head>
+	  <titel>All Employe</titel>
+	 </head>
+<body>
+	 <table>
+		<thead>
+			 <th>Name</th>
+			 <th>Prenom</th>
+			</thead>
+		 <tbody>
+			 @foreach (Employee emp in Model){
+				<tr>
+					 <td>@emp.Name</td>
+					 <td>@emp.Prenom</td>
+					</tr>
+			 }
+			 </tbody>
+	 </table>
+	</body>
+</html>

@@ -32,5 +32,11 @@ namespace FirstProject.Controllers
         }
 
 
+        public ViewResult AllEmployee()
+        {
+            return View(Repository.GETEmployees());
+        }
+
+
     }
 }
