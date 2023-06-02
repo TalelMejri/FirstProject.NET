@@ -4,21 +4,33 @@
         <title>Employee</title>
     </head>
     <body>
-        <h1>Hello from employee</h1>
-        <form asp-action="Employees" method="post">
+        <h1 class="text-center">Hello from employee</h1>
+        <form  asp-action="Employees" method="post">
             <div>
             <label asp-for="Name">Name</label>
-            <input asp-for="Name" />
+            <input class="form-control" asp-for="Name" />
         </div>
         <div>
             <label asp-for="Prenom">Prenom</label>
-            <input asp-for="Prenom" />
+            <input class="form-control" asp-for="Prenom" />
         </div>
         <div>
             <label asp-for="isActive">Accpeter</label>
             <input type="checkbox" asp-for="isActive" />
         </div>
-        <button type="submit">Save</button>
+        <div>
+            <label asp-for="Email">Email</label>
+            <input class="form-control" type="email" asp-for="Email" />
+        </div>
+        <div>
+            <label asp-for="JobTitel">JObTitel</label>
+            <input class="form-control"  type="text" asp-for="JobTitel" />
+        </div>
+        <div>
+            <label asp-for="birthday">BirthDay</label>
+            <input class="form-control" type="date" asp-for="birthday" />
+        </div>
+        <button class="btn btn-primary" type="submit">Save</button>
         </form>
     </body>
 </html>

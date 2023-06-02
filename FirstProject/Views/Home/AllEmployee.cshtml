@@ -4,16 +4,24 @@
 	  <titel>All Employe</titel>
 	 </head>
 <body>
-	 <table>
+	 <table >
 		<thead>
-			 <th>Name</th>
-			 <th>Prenom</th>
+			<th>Name</th>
+			<th>Prenom</th>
+			<th>Email</th>
+			<th>BirthDay</th>
+			<th>Job Titel</th>
+		    <th>Active</th> 
 			</thead>
 		 <tbody>
 			 @foreach (Employee emp in Model){
 				<tr>
 					 <td>@emp.Name</td>
 					 <td>@emp.Prenom</td>
+					 <td>@emp.Email</td>
+					 <td>@emp.birthday</td>
+					 <td>@emp.JobTitel</td>
+					 <td>@(emp.isActive ? "Active" : "No Active")</td>
 					</tr>
 			 }
 			 </tbody>

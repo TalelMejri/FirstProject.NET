@@ -34,7 +34,7 @@ namespace FirstProject.Controllers
 
         public ViewResult AllEmployee()
         {
-            return View(Repository.GETEmployees());
+            return View(Repository.GETEmployees().Where(emp=>emp.isActive==false));
         }
 
 
