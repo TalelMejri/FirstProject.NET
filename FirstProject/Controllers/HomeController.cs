@@ -5,9 +5,7 @@ using System.Diagnostics;
 namespace FirstProject.Controllers
 {
     public class HomeController : Controller
-    {
-      
-
+    {      
         public IActionResult Index()
         {
             return View();
@@ -27,16 +25,25 @@ namespace FirstProject.Controllers
         [HttpPost]
         public ViewResult Employees(Employee emp)
         {
-            Repository.AddEmployee(emp);
-            return View("ConfirmVue",emp);
+           if(ModelState.IsValid)
+            {
+				Repository.AddEmployee(emp);
+				return View("ConfirmVue", emp);
+			}
+            else
+            {
+                return View();
+            }
+         
         }
 
 
         public ViewResult AllEmployee()
         {
-            return View(Repository.GETEmployees().Where(emp=>emp.isActive==false));
-        }
+			//return View(Repository.GETEmployees().Where(emp=>emp.isActive==false));
+			return View(Repository.GETEmployees());
+		}
 
 
-    }
+	}
 }

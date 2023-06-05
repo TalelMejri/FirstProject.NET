@@ -1,8 +1,11 @@
-﻿namespace FirstProject.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace FirstProject.Models
 {
     public class Employee
     {
-     
+
+        [Required]
         public string Name { get; set; }
 
         public string Prenom { get; set; }

@@ -5,6 +5,7 @@
     </head>
     <body>
         <h1 class="text-center">Hello from employee</h1>
+        <div asp-validation-summary="All"></div>
         <form  asp-action="Employees" method="post">
             <div>
             <label asp-for="Name">Name</label>
